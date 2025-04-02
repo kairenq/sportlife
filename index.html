@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спортивный сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        nav {
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        .nav-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: rgba(231, 76, 60, 0.8);
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            font-weight: bold;
+        }
+
+        .nav-btn:hover {
+            background-color: #e74c3c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            color: white;
+        }
+
+        /* Адаптивность для навигации */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .nav-btn {
+                width: 200px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">Sport<span>Life</span></div>
+            <nav>
+                <ul>
+                    <li><a href="page1.html" class="nav-btn">Тяжелая атлетика</a></li>
+                    <li><a href="page2.html" class="nav-btn">Легкая атлетика</a></li>
+                    <li><a href="page3.html" class="nav-btn">Футбол</a></li>
+                    <li><a href="page4.html" class="nav-btn">Баскетбол</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Добро пожаловать в мой мир спорта!</h1>
+                <p>Спорт - это не просто физическая активность, это образ жизни, который приносит здоровье, радость и дисциплину. На нашем сайте вы узнаете о различных видах спорта и их пользе для организма.</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Основной контент -->
+    <main class="container">
+        <section class="sports">
+            <!-- Карточка 1 - Тяжелая атлетика -->
+            <a href="page1.html" class="sport-card-link">
+                <div class="sport-card">
+                    <div class="sport-image" style="background-image: url('img/1.jpg');"></div>
+                    <div class="sport-content">
+                        <h2>Тяжелая атлетика</h2>
+                        <p>Тяжелая атлетика - это силовой вид спорта, включающий поднятие штанги над головой. Спортсмены соревнуются в двух упражнениях: рывке и толчке. Этот вид спорта развивает силу, взрывную мощь и координацию движений.</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Карточка 2 - Легкая атлетика -->
+            <a href="page2.html" class="sport-card-link">
+                <div class="sport-card">
+                    <div class="sport-image" style="background-image: url('img/2.jpg');"></div>
+                    <div class="sport-content">
+                        <h2>Легкая атлетика</h2>
+                        <p>Легкая атлетика - это совокупность видов спорта, включающая бег, ходьбу, прыжки и метания. Она считается королевой спорта и объединяет множество дисциплин. Легкая атлетика развивает выносливость, скорость и ловкость.</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Карточка 3 - Футбол -->
+            <a href="page3.html" class="sport-card-link">
+                <div class="sport-card">
+                    <div class="sport-image" style="background-image: url('img/3.jpg');"></div>
+                    <div class="sport-content">
+                        <h2>Футбол</h2>
+                        <p>Футбол - это командный вид спорта, в котором две команды по 11 игроков играют мячом на прямоугольном поле. Цель игры - забить гол в ворота соперника. Футбол развивает скорость, координацию и тактическое мышление.</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Карточка 4 - Баскетбол -->
+            <a href="page4.html" class="sport-card-link">
+                <div class="sport-card">
+                    <div class="sport-image" style="background-image: url('img/4.jpg');"></div>
+                    <div class="sport-content">
+                        <h2>Баскетбол</h2>
+                        <p>Баскетбол - это динамичная командная игра с мячом, где игроки стараются забросить мяч в корзину соперника. Игра развивает ловкость, прыгучесть и командный дух. Баскетбол был изобретен в 1891 году.</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Форма для отзыва -->
+        <section class="feedback-form">
+            <h2>Оставьте ваш отзыв</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label>Пол:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male" checked> Мужской</label>
+                        <label><input type="radio" name="gender" value="female"> Женский</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Ваш возраст:</label>
+                    <input type="number" id="age" name="age" min="10" max="100" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sport">Ваш любимый вид спорта:</label>
+                    <select id="sport" name="sport" required>
+                        <option value="">-- Выберите вид спорта --</option>
+                        <option value="weightlifting">Тяжелая атлетика</option>
+                        <option value="athletics">Легкая атлетика</option>
+                        <option value="football">Футбол</option>
+                        <option value="basketball">Баскетбол</option>
+                        <option value="other">Другой</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="review">Ваш отзыв:</label>
+                    <textarea id="review" name="review" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Отправить</button>
+            </form>
+        </section>
+        <a href="#" class="back-to-top" title="Наверх">↑</a>
+    </main>
+    
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SportLife. Все права защищены.</p>
+        </div>
+    </footer>
+<script>
+    // Кнопка "Вверх"
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+    
+    backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+</body>
+</html>
