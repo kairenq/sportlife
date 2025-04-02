@@ -1,0 +1,271 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 0 80px;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.logo span {
+    color: #e74c3c;
+}
+
+nav {
+    margin-bottom: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+}
+
+.header-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-text h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.header-text p {
+    font-size: 20px;
+}
+
+/* Основной контент */
+main {
+    padding: 40px 0;
+}
+
+/* Блоки с видами спорта */
+.sports {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sport-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+}
+
+.sport-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.sport-image {
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.sport-content {
+    padding: 25px;
+}
+
+.sport-content h2 {
+    color: #e74c3c;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* Футер */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .sport-card {
+        flex-direction: column;
+    }
+    
+    .sport-image {
+        width: 100%;
+        height: 150px;
+    }
+    
+    .header-text h1 {
+        font-size: 32px;
+    }
+    
+    .header-text p {
+        font-size: 16px;
+    }
+}
+/* Стили для ссылок-карточек */
+.sport-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.sport-card-link:hover {
+    transform: scale(1.02);
+}
+
+.sport-card-link:hover .sport-card {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Стили для формы */
+.feedback-form {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.feedback-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #1a252f;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #e74c3c;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
